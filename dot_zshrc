@@ -3,6 +3,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export PATH="$PATH:/home/abzy/bin"
+export PATH="$PATH:/home/abzy/.local/bin"
 export PATH="$PATH:/home/abzy/.cargo/bin"
 
 export EDITOR="nvim"
@@ -62,4 +63,11 @@ alias cls='clear'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source /home/abzy/.config/broot/launcher/bash/br
+
+# pnpm
+export PNPM_HOME="/home/abzy/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
