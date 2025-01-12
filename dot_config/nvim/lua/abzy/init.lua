@@ -1,3 +1,4 @@
 require("abzy.packer")
 require("abzy.remap")
-print("hello from config.d")
+require("abzy.colors")
+require("abzy.set")
