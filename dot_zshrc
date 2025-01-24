@@ -7,7 +7,7 @@ export PATH="$PATH:/home/abzy/.local/bin"
 export PATH="$PATH:/home/abzy/.cargo/bin"
 
 export SPARK_HOME="/opt/spark"
-export PATH="$PATH:$SPARK_HOME/bin"
+export PATH="$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin"
 
 
 export EDITOR="nvim"
