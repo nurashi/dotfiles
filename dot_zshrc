@@ -8,13 +8,12 @@ if uwsm check may-start; then
     exec uwsm start hyprland.desktop
 fi
 
-
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 export PATH="$PATH:/home/abzy/bin"
-export PATH="$PATH:/home/abzy/.local/bin"
+export PATH="$PATH:/home/abzy/.local/bin:/home/abzy/.local/sbin"
 export PATH="$PATH:/home/abzy/.local/sbin"
 export PATH="$PATH:/home/abzy/.cargo/bin"
 
