@@ -4,12 +4,10 @@
 #fi
 
 # Launch Hyprland directly
-if uwsm check may-start; then
-    exec uwsm start hyprland.desktop
-fi
-
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ "$(hostname)" == "abzy-linux" ]]; then
+  if uwsm check may-start; then
+      exec uwsm start hyprland.desktop
+  fi
 fi
 
 export PATH="$PATH:/home/abzy/bin"
@@ -27,7 +25,7 @@ export PATH="$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin"
 export EDITOR="nvim"
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="robbyrussell"
 
 zstyle ':omz:update' mode reminder 
 zstyle ':omz:update' frequency 7
@@ -45,12 +43,7 @@ fi
 export ARCHFLAGS="-arch x86_64"
 
 plugins=(
-	nvm
 	git
-	tmux
-	yarn
-	docker
-	npm
 	dotnet
 	zsh-autosuggestions
 	zsh-syntax-highlighting
@@ -80,8 +73,6 @@ alias cls='clear'
 alias vim='nvim'
 alias vi='nvim'
 alias reload_waybar='pkill waybar && hyprctl dispatch exec waybar'
-
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # pnpm
 export PNPM_HOME="/home/abzy/.local/share/pnpm"
