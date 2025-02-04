@@ -180,7 +180,13 @@ require("lazy").setup({
 			},
 		},
 	},
-
+	{
+		"goolord/alpha-nvim",
+		dependencies = { "echasnovski/mini.icons" },
+		config = function()
+			require("alpha").setup(require("alpha.themes.startify").config)
+		end,
+	},
 	{ -- Fuzzy Finder (files, lsp, etc)
 		"nvim-telescope/telescope.nvim",
 		event = "VimEnter",
