@@ -138,7 +138,7 @@
         "bat": "BAT2"
     },
     "network": {
-        "interface": "wlo1", // (Optional) To force the use of this interface
+        "interface": "wlan0", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
