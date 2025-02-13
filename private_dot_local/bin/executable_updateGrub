@@ -1,1 +1,1 @@
-sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+sudo grub-mkconfig -o /boot/grub/grub.cfg
