@@ -68,7 +68,7 @@ alias lt='exa --tree --level=2'                                         # tree
 alias cls='clear'
 alias vim='nvim'
 alias vi='nvim'
-alias reload_waybar='pkill waybar && hyprctl dispatch exec waybar'
+alias reload_waybar='pkill waybar || hyprctl dispatch exec waybar'
 
 # pnpm
 export PNPM_HOME="/home/abzy/.local/share/pnpm"
