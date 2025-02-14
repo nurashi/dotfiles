@@ -449,9 +449,7 @@ require("lazy").setup({
 				ts_ls = {},
 				csharp_ls = {},
 				jdtls = {},
-				hyprls = {
-					filetypes = { "*.hl", "hypr*.conf" },
-				},
+				hyprls = {},
 				lua_ls = {
 					-- cmd = { ... },
 					-- filetypes = { ... },
