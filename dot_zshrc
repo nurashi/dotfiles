@@ -53,7 +53,9 @@ export LANG='en_US.UTF-8'
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 
-alias start='xdg-open'
+function start () {
+    xdg-open "$*" > /dev/null 2>&1 &
+}
 
 alias ls='exa'                                                          # ls
 alias l='exa -lbF --git'                                                # list, size, type, git
