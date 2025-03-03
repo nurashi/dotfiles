@@ -1,17 +1,15 @@
 # uwsm 
-if [[ "$(hostname)" == "abzy-linux" ]]; then
 #  if uwsm check may-start && uwsm select; then
 #	exec systemd-cat -t uwsm_start uwsm start default
 #  fi
-  if uwsm check may-start; then
-      exec uwsm start hyprland.desktop
-  fi
+if uwsm check may-start; then
+  exec uwsm start hyprland.desktop
 fi
 
-export PATH="$PATH:/home/abzy/bin"
-export PATH="$PATH:/home/abzy/.local/bin:/home/abzy/.local/sbin"
-export PATH="$PATH:/home/abzy/.local/sbin"
-export PATH="$PATH:/home/abzy/.cargo/bin"
+export PATH="$PATH:/home/$USER/bin"
+export PATH="$PATH:/home/$USER/.local/bin:/home/$USER/.local/sbin"
+export PATH="$PATH:/home/$USER/.local/sbin"
+export PATH="$PATH:/home/$USER/.cargo/bin"
 
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"
@@ -73,7 +71,7 @@ alias vi='nvim'
 alias reload_waybar='pkill waybar || hyprctl dispatch exec waybar'
 
 # pnpm
-export PNPM_HOME="/home/abzy/.local/share/pnpm"
+export PNPM_HOME="/home/$USER/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
