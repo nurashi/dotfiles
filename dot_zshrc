@@ -70,6 +70,7 @@ alias lt='exa --tree --level=2'                                         # tree
 alias cls='clear'
 alias vim='nvim'
 alias vi='nvim'
+alias zed='zeditor'
 alias reload_waybar='pkill waybar || hyprctl dispatch exec waybar'
 
 
