@@ -1,4 +1,4 @@
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="spaceship"
 
 zstyle ':omz:update' mode reminder 
 zstyle ':omz:update' frequency 7
@@ -6,15 +6,23 @@ zstyle ':omz:update' frequency 7
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(
-  git
-  dotnet
+  # must-have
   zsh-autosuggestions
   zsh-syntax-highlighting
+  
+  # theme and prompt
+  starship
+
+  # completions
+  gitfast
+  dotnet
   nvm
+  eza
+  aliases
+  gitignore
 )
 
 source $ZSH/oh-my-zsh.sh
-
 
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
