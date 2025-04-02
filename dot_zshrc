@@ -14,6 +14,7 @@ plugins=(
   starship
 
   # completions
+  aws
   gitfast
   dotnet
   nvm
