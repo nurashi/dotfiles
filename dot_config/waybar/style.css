@@ -21,9 +21,9 @@
 }
 
 #waybar {
-	font-family: 'Cascadia Mono', sans-serif;
-	font-size: 1.2em;
-	font-weight: 400;
+  font-family: 'Cascadia Mono', sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
   color: @base04;
   background: @base01;
 }
@@ -93,12 +93,12 @@
 
 #window {
   font-size: 0.9em;
-	font-weight: 400;
-	font-family: sans-serif;
+  font-weight: 400;
+  font-family: sans-serif;
 }
 
 #language {
-	font-size: 0.9em;
-	font-weight: 500;
-	letter-spacing: -1px;
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: -1px;
 }
