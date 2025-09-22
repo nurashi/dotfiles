@@ -23,7 +23,7 @@ EOF
 
 start_ncalayer() {
     echo "Starting NCALayer..."
-    uwsm app -- .config/autostart/ncalayer.desktop
+    uwsm app -- ~/.local/share/applications/ncalayer.desktop
 }
 
 stop_ncalayer() {
